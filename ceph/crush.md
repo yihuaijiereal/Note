@@ -140,3 +140,5 @@ do_rule方法调用了mapper.h中的crush_do_rule方法
       		  int ruleno, int x, int *result, int result_max,
       		  const __u32 *weight, int weight_max,
       		  int *scratch)；
+
+crush_do_rule()方法调用crush_find_firstn()方法，crush_find_firstn()调用crush_bucket_choose()方法，该方法调用Robert Jenkins's hash 函数来选择一个osd。
